@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GitHub - Wanzho</title>
+<meta name="description" content="Free, open-source tools for Minecraft Dungeons II by Wanzho: MCD2 Crossover runs the game on Apple silicon Macs with CrossOver, and wasdmod adds WASD, mouse and keyboard controls.">
+<link rel="canonical" href="https://wanzho.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GitHub - Wanzho">
+<meta property="og:title" content="GitHub - Wanzho">
+<meta property="og:description" content="Free, open-source tools for Minecraft Dungeons II: MCD2 Crossover and wasdmod.">
+<meta property="og:url" content="https://wanzho.github.io/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GitHub - Wanzho",
+  "alternateName": ["Wanzho", "Wanzho on GitHub"],
+  "url": "https://wanzho.github.io/"
+}
+</script>
+<style>
+  @font-face { font-family: "Pixel"; src: url("pixel.ttf") format("truetype"); font-display: swap; }
+  :root {
+    color-scheme: dark;
+    --bg: #000; --surface: #101012; --surface-2: #161618; --hairline: rgba(255, 255, 255, .1);
+    --text: #f5f5f7; --text-2: #a1a1a6; --text-3: #6e6e73; --link: #2997ff; --blue: #0071e3;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI Variable Display", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --ease: cubic-bezier(.22, .8, .24, 1);
+    --gutter: 22px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: var(--bg); color: var(--text); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); font: 400 17px/1.47 var(--font); letter-spacing: -.022em; -webkit-font-smoothing: antialiased; }
+  h1, h2, p, ul { margin: 0; }
+  ul { padding: 0; list-style: none; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { display: block; max-width: 100%; height: auto; }
+  :focus-visible { outline: 3px solid rgba(41, 151, 255, .9); outline-offset: 3px; border-radius: 6px; }
+  .wrap { width: min(1040px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+
+  .top { position: sticky; top: 0; z-index: 10; height: 52px; background: rgba(0, 0, 0, .72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); box-shadow: inset 0 -1px 0 var(--hairline); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font: 400 24px/1 "Pixel", ui-monospace, monospace; letter-spacing: .02em; }
+  .brand:hover { text-decoration: none; }
+  .brand svg { width: 24px; height: 24px; }
+  .gh { display: inline-flex; align-items: center; gap: 7px; min-height: 28px; padding: 4px 12px; border-radius: 980px; background: rgba(255, 255, 255, .1); color: var(--text); font-size: 13px; letter-spacing: -.01em; transition: background-color .2s; }
+  .gh:hover { background: rgba(255, 255, 255, .18); text-decoration: none; }
+  .gh svg { width: 15px; height: 15px; }
+
+  main { flex: 1; }
+  .hero { position: relative; padding: clamp(80px, 14vh, 150px) 0 clamp(48px, 7vh, 72px); text-align: center; isolation: isolate; }
+  .hero::before { content: ""; position: absolute; z-index: -1; inset: -10% 0 -30%; pointer-events: none; background: radial-gradient(40% 50% at 35% 60%, rgba(47, 211, 255, .14), transparent 70%), radial-gradient(40% 50% at 65% 60%, rgba(255, 106, 61, .13), transparent 70%); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: clamp(19px, 1.7vw, 24px); font-weight: 600; color: var(--text-2); }
+  .eyebrow svg { width: 1.05em; height: 1.05em; }
+  h1 { margin-top: 12px; font-size: clamp(44px, 7vw, 88px); line-height: 1.05; font-weight: 600; letter-spacing: -.02em; text-wrap: balance; }
+  .sub { max-width: 30em; margin: 18px auto 0; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.3; font-weight: 600; color: var(--text-2); text-wrap: balance; }
+  .sub b { color: var(--text); font-weight: 600; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-bottom: clamp(90px, 13vh, 140px); }
+  .card { position: relative; display: flex; flex-direction: column; padding: 36px 36px 32px; border-radius: 28px; background: var(--surface); overflow: hidden; isolation: isolate; transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+  .card::before { content: ""; position: absolute; z-index: -1; right: -20%; top: -30%; width: 80%; height: 80%; border-radius: 50%; background: radial-gradient(closest-side, var(--glow), transparent); opacity: .7; transition: opacity .5s var(--ease); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 30px 80px -40px var(--glow); }
+  .card:hover::before { opacity: 1; }
+  .card.mcd2 { --glow: rgba(47, 211, 255, .3); --grad: linear-gradient(90deg, #8af6ff, #2fd3ff 40%, #2b8cff); }
+  .card.wasd { --glow: rgba(255, 106, 61, .3); --grad: linear-gradient(90deg, #ffb340, #ff6a3d 45%, #ff3d77); }
+  .card img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 12px 30px rgba(0, 0, 0, .5); }
+  .card.wasd img { image-rendering: pixelated; }
+  .card h2 { margin-top: 26px; font-size: clamp(32px, 3.4vw, 44px); line-height: 1.08; font-weight: 600; letter-spacing: -.015em; }
+  .card .tag { margin-top: 10px; font-size: 21px; line-height: 1.3; font-weight: 600; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .card p.desc { margin-top: 14px; font-size: 17px; line-height: 1.47; color: var(--text-2); }
+  .card .meta { margin-top: 14px; font-size: 14px; color: var(--text-3); }
+  .card .links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: auto; padding-top: 28px; }
+  .btn { display: inline-flex; align-items: center; min-height: 40px; padding: 9px 20px; border-radius: 980px; background: var(--blue); color: #fff; font-size: 17px; transition: background-color .2s; }
+  .btn:hover { background: #0077ed; text-decoration: none; }
+  .chev { display: inline-flex; align-items: center; gap: 6px; font-size: 17px; }
+  .chev svg { width: 16px; height: 16px; }
+
+  footer { padding: 26px 0 40px; background: var(--surface-2); color: var(--text-2); font-size: 12px; line-height: 1.4; letter-spacing: -.01em; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 8px 0; margin-bottom: 12px; }
+  footer .links a { color: var(--text); padding-right: 12px; margin-right: 12px; border-right: 1px solid var(--hairline); }
+  footer .links a:last-child { border-right: 0; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > *, .card { animation: rise 1s var(--ease) both; }
+    .hero > :nth-child(2) { animation-delay: .06s; }
+    .hero > :nth-child(3) { animation-delay: .12s; }
+    .card:nth-child(1) { animation-delay: .18s; }
+    .card:nth-child(2) { animation-delay: .26s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  }
+  @media (max-width: 734px) {
+    .cards { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .card { padding: 28px 26px 26px; border-radius: 22px; }
+    .card img { width: 72px; height: 72px; border-radius: 16px; }
+    .brand { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Wanzho</a>
+    <a class="gh" href="https://github.com/Wanzho"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>GitHub</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Wanzho on GitHub</p>
+    <h1>Tools for Minecraft Dungeons&nbsp;II.</h1>
+    <p class="sub"><b>Free and open source.</b> Play it on your Mac, and play it with WASD.</p>
+  </section>
+
+  <ul class="cards wrap">
+    <li class="card mcd2">
+      <img src="mcd2-icon.png" alt="" width="88" height="88">
+      <h2>MCD2 Crossover</h2>
+      <p class="tag">Dungeons&nbsp;II. Now on your&nbsp;Mac.</p>
+      <p class="desc">Runs Minecraft Dungeons&nbsp;II on Apple silicon Macs with CrossOver. Start&#8209;up and Xbox sign&#8209;in fixes for the Steam version: Visual&nbsp;C++, Game Runtime, 0060, 0063, 0064 and&nbsp;0020.</p>
+      <p class="meta">macOS · CrossOver · Steam</p>
+      <div class="links">
+        <a class="btn" href="mcd2-crossover/">Learn more</a>
+        <a class="chev" href="https://github.com/Wanzho/mcd2-crossover"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Repository</a>
+      </div>
+    </li>
+    <li class="card wasd">
+      <img src="wasd-icon.png" alt="" width="88" height="88">
+      <h2>wasdmod</h2>
+      <p class="tag">Goodbye, click&#8209;to&#8209;move.</p>
+      <p class="desc">Plays Minecraft Dungeons&nbsp;II with WASD, mouse and keyboard, as a controller: smooth movement, dodges, artifacts and the menu wheel on the keys you already&nbsp;know.</p>
+      <p class="meta">Windows · Mac · Steam Deck</p>
+      <div class="links">
+        <a class="btn" href="wasd/">Learn more</a>
+        <a class="chev" href="https://github.com/Wanzho/mcd2-wasd"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Repository</a>
+      </div>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="links" aria-label="Links">
+      <a href="https://github.com/Wanzho">GitHub</a>
+      <a href="mcd2-crossover/">MCD2 Crossover</a>
+      <a href="wasd/">wasdmod</a>
+    </nav>
+    <p>Unofficial fan projects. Not affiliated with Mojang, Microsoft or CodeWeavers. Minecraft is a trademark of Mojang Synergies&nbsp;AB.</p>
+  </div>
+</footer>
+
+</body>
+</html>
